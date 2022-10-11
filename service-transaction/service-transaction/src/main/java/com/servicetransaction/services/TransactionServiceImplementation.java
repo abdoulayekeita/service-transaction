@@ -195,7 +195,7 @@ public class TransactionServiceImplementation implements TransactionService{
         httpPost.setHeader("Content-type", APPLICATION_FORM_URLENCODED_VALUE);
         // Request parameters and other properties.
         List<NameValuePair> params = new ArrayList<NameValuePair>(2);
-        params.add(new BasicNameValuePair("username", username));
+        params.add(new BasicNameValuePair("c", username));
         params.add(new BasicNameValuePair("password", password));
         httpPost.setEntity(new UrlEncodedFormEntity(params, "UTF-8"));
         CloseableHttpResponse response = client.execute(httpPost);
